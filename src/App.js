@@ -1,18 +1,18 @@
 import React from 'react';
-import WishMessage from './Wish/WishMessage/WishMessage';
-import store from './store';
-import { Provider } from 'react-redux';
-import ProductCounter from './Product/ProductCounter/ProductCounter';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Navbar from './Routing/Navbar/Navbar';
 
-let App=()=>{
-    return(<>
-    <nav className="navbar navbar-dark bg-dark">
-        <a href="/">React Redux Basic Example</a>
-    </nav>
-    <Provider store={store} >
-        <WishMessage />
-        <ProductCounter />
-    </Provider>
-    </>)
+function App(){
+    return<>
+    <Router>
+    <Navbar />
+        <Switch>
+            <Route exact path="/home" />
+            <Route exact path="/summery" />
+            <Route exact path="/aboutus" />
+            <Route exact path="/contactus" />
+        </Switch>
+    </Router>
+    </>
 }
 export default App;
