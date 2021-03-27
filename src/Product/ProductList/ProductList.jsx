@@ -32,11 +32,9 @@ let ProductList=()=>{
                         <tr>
                             <td>{product.product_Name}</td>
                             <td><img src={product.product_Image} height="50px" width="50px"/> </td>
-                            <td><i className="fa fa-minus-circle" aria-hidden="true" onClick={decrHandler}></i> 
-                            {product.product_Qty}
-                            <i className="fa fa-plus-circle" aria-hidden="true" onClick={incrHandler}></i> </td>
-                            <td>{product.product_Price}</td>
-                            <td>{product.product_Qty * product.product_Price}</td>
+                            <td><i className="fa fa-minus-circle" aria-hidden="true" onClick={decrHandler}></i> </td>
+                            <td><i className="fa fa-plus-circle" aria-hidden="true" onClick={incrHandler}></i> </td>
+                            <td></td>
                         </tr>
                     </tbody>
 
